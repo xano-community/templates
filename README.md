@@ -12,10 +12,12 @@ The templates under **Start from a template**, in the order shown. Each entry:
 | `repo`        | `owner/name` of a public GitHub repository with a `package.json` that depends on `@xano/sdk`.     |
 | `name`        | The name on the card, and the new app's name.                                                   |
 | `description` | One line under the name.                                                                        |
-| `signature`   | Which drawing the card shows: `kanban`, `calendar`, `map`, `dashboard`, `library`, `document`.  |
+| `image`       | The card's picture: a path in this repository (such as `images/commons-light.svg`) or an `https://` URL. Shown at 15:8, so 480×256 works well. |
+| `imageDark`   | The same picture for Studio's dark theme. Without it, `image` is used in both.                  |
+| `signature`   | The drawing Studio shows when there is no `image`, or it does not load: `kanban`, `calendar`, `map`, `dashboard`, `library`, `document`. |
 | `prompt`      | Put in the message box when the app opens. It is not sent: the person edits it, then sends.     |
 
-Only `repo` is required. A repository Studio cannot run is left out of the list.
+To change a card's picture, replace its file in `images/` (or point `image` at a new one). Only `repo` is required. A repository Studio cannot run is left out of the list.
 
 ## `ideas.json`
 

@@ -4,6 +4,8 @@
     "name": "Commons",
     "description": "Chat, tasks, docs and customers for a small team, with AI agents that ask before they act.",
     "signature": "kanban",
+    "image": "images/commons-light.svg",
+    "imageDark": "images/commons-dark.svg",
     "prompt": "I'm starting from the Commons template. Show me around, then help me make it mine.\n\nWhat I want to change: "
   },
   {
@@ -11,6 +13,8 @@
     "name": "Atelier",
     "description": "An AI studio for your team: try models, save what works as recipes, and ask your own documents.",
     "signature": "library",
+    "image": "images/atelier-light.svg",
+    "imageDark": "images/atelier-dark.svg",
     "prompt": "I'm starting from the Atelier template. Show me around, then help me make it mine.\n\nWhat I want to change: "
   },
   {
@@ -18,6 +22,8 @@
     "name": "Countersign",
     "description": "Send documents for signature, sign them anywhere, and keep a copy anyone can check.",
     "signature": "document",
+    "image": "images/countersign-light.svg",
+    "imageDark": "images/countersign-dark.svg",
     "prompt": "I'm starting from the Countersign template. Show me around, then help me make it mine.\n\nWhat I want to change: "
   }
 ]
