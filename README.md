@@ -15,6 +15,7 @@ The templates under **Start from a template**, in the order shown. Each entry:
 | `image`       | The card's picture: a path in this repository (such as `images/commons-light.svg`) or an `https://` URL. Shown at 15:8, so 480×256 works well. |
 | `imageDark`   | The same picture for Studio's dark theme. Without it, `image` is used in both.                  |
 | `signature`   | The drawing Studio shows when there is no `image`, or it does not load: `kanban`, `calendar`, `map`, `dashboard`, `library`, `document`. |
+| `types`       | What it is a template of, for the type cards and the filter in the list: any of `full` (a whole app), `backend`, `mcp` (an MCP server), `agent` (a Xano AI agent). Without it, the template shows only under **All**. |
 | `prompt`      | Put in the message box when the app opens. It is not sent: the person edits it, then sends.     |
 
 To change a card's picture, replace its file in `images/` (or point `image` at a new one). Only `repo` is required. A repository Studio cannot run is left out of the list.
