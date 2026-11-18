@@ -39,15 +39,31 @@ The canvas has the same shape as `canvas.graph` on xano.com/templates.
 
 ## `ideas.json`
 
-The prompts under **Ideas**, by what the app is for: `full` (a whole app),
-`backend`, `mcp` (an MCP server) and `agent` (a Xano AI agent). Each entry:
+The prompts under **Ideas**. Ideas opens on the `categories`, in the order
+listed; picking one shows its ideas. Each category:
 
-| Field    | What it is                                                                                         |
-| -------- | -------------------------------------------------------------------------------------------------- |
-| `label`  | The idea's name.                                                                                   |
-| `detail` | One line under the name.                                                                           |
-| `prompt` | Put in the message box when picked. It is not sent.                                                |
-| `icon`   | Optional: `handshake`, `headset`, `briefcase`, `calendar`, `receipt`, `package`, `smartphone`, `credit-card`, `mail`, `book`, `contact`, `truck`, `target`, `notebook`, `bot`, `store`. |
+| Field    | What it is                                              |
+| -------- | ------------------------------------------------------- |
+| `id`     | What an idea's `category` names. Do not use `more`.     |
+| `label`  | The category's name.                                    |
+| `detail` | One line under the name.                                |
+| `icon`   | Optional: any idea icon, or `compass`, `rocket`, `users`, `plug`, `refresh`. |
+
+The ideas are listed by what the app is for: `full` (a whole app), `backend`,
+`mcp` (an MCP server) and `agent` (a Xano AI agent). A category shows for a
+kind of app only when it has ideas of that kind. Each entry:
+
+| Field      | What it is                                                                                         |
+| ---------- | -------------------------------------------------------------------------------------------------- |
+| `label`    | The idea's name.                                                                                   |
+| `detail`   | One line under the name.                                                                           |
+| `prompt`   | Put in the message box when picked. It is not sent.                                                |
+| `category` | The `id` of its category. Without one, or with one that is not listed, it shows last under **More ideas**. |
+| `icon`     | Optional: `handshake`, `headset`, `briefcase`, `calendar`, `receipt`, `package`, `smartphone`, `credit-card`, `mail`, `book`, `contact`, `truck`, `target`, `notebook`, `bot`, `store`. |
+
+Older versions of Studio ignore the categories and show each kind of app's
+ideas as one list, in the order here, so keep the best ideas of each category
+near its top.
 
 Every released version of Studio reads these files, so only add ideas and
 templates that any of them can build. If a file is missing or does not parse,
