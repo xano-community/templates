@@ -19,6 +19,23 @@ The templates under **Start from a template**, in the order shown. Each entry:
 
 To change a card's picture, replace its file in `images/` (or point `image` at a new one). Only `repo` is required. A repository Studio cannot run is left out of the list.
 
+## `details/<name>.json`
+
+What a template's detail page in Studio shows beyond its card: a paragraph about
+it, a picture of the running app, how many screens, endpoints and tables it has,
+and the canvas of its backend. One file per template, named after its repository
+(`details/commons-team-workspace.json`). A template with no file still lists; its
+page shows the card's picture and words.
+
+Do not write these by hand. They are read from each template's own repository:
+
+```sh
+node scripts/gen-details.mjs
+```
+
+Run it after adding a template or when one changes, and commit what it writes.
+The canvas has the same shape as `canvas.graph` on xano.com/templates.
+
 ## `ideas.json`
 
 The prompts under **Ideas**, by what the app is for: `full` (a whole app),

@@ -1,0 +1,99 @@
+{
+  "repo": "xano-community/countersign-document-signing",
+  "about": "Countersign is electronic signing for a team. Upload a PDF, add who signs and in what order, drop signature, initials, date and text fields on the page, and send. Each person signs from a link on their phone or computer, with no account. When everyone has signed, Countersign seals a final PDF with a certificate of completion, and anyone can check that file on the verify page. Templates, bulk sending from a spreadsheet, public signing links, a REST API, webhooks and MCP tools are built in.",
+  "screenshot": "https://raw.githubusercontent.com/xano-community/countersign-document-signing/HEAD/docs/screenshot-light.png",
+  "screenshotDark": "https://raw.githubusercontent.com/xano-community/countersign-document-signing/HEAD/docs/screenshot-dark.png",
+  "counts": {
+    "tables": 36,
+    "endpoints": 122,
+    "screens": 14
+  },
+  "canvas": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "client",
+          "label": "Countersign app",
+          "type": "transform",
+          "col": 0,
+          "row": 0,
+          "sublabel": "Documents\nNew document\nTemplates\nDevelopers\nOrganisation\nVerify"
+        },
+        {
+          "id": "api",
+          "label": "API",
+          "type": "entry",
+          "col": 1,
+          "row": 0,
+          "sublabel": "envelopes\nauthn\ndocuments\ntemplates\napp\ndeveloper\n+15 more"
+        },
+        {
+          "id": "agents",
+          "label": "Your agents",
+          "type": "transform",
+          "col": 0,
+          "row": 1,
+          "sublabel": "Claude · ChatGPT\nany MCP client"
+        },
+        {
+          "id": "tools",
+          "label": "Agent tools",
+          "type": "entry",
+          "col": 1,
+          "row": 1,
+          "sublabel": "list_envelopes\nget_envelope\nlist_templates\nsend_from_template\nvoid_envelope\nremind\n+5 more"
+        },
+        {
+          "id": "logic",
+          "label": "Business logic",
+          "type": "transform",
+          "col": 2,
+          "row": 0,
+          "sublabel": "audit\ndemo\ndeveloper\ndocuments\nemail\nenvelope\n+6 more"
+        },
+        {
+          "id": "data",
+          "label": "Data",
+          "type": "store",
+          "col": 3,
+          "row": 0,
+          "sublabel": "account\napi_key\napi_key_use\naudit_event\nbulk_send\nbulk_send_row\n+19 more"
+        },
+        {
+          "id": "external",
+          "label": "External services",
+          "type": "external",
+          "col": 4,
+          "row": 0,
+          "sublabel": "Resend"
+        }
+      ],
+      "edges": [
+        {
+          "from": "client",
+          "to": "api"
+        },
+        {
+          "from": "agents",
+          "to": "tools"
+        },
+        {
+          "from": "api",
+          "to": "logic"
+        },
+        {
+          "from": "tools",
+          "to": "logic"
+        },
+        {
+          "from": "logic",
+          "to": "data"
+        },
+        {
+          "from": "logic",
+          "to": "external"
+        }
+      ]
+    }
+  }
+}
