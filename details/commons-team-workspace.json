@@ -1,0 +1,99 @@
+{
+  "repo": "xano-community/commons-team-workspace",
+  "about": "Commons is Xano's flagship team workspace. A small team can trial it with real work: talk in channels and DMs, run tasks on a board, write docs together, keep track of customers, and share files. Agents are members too. They have a name, a sponsor and the same access rules as a person, and anything a guest would see waits for a person to approve it.",
+  "screenshot": "https://raw.githubusercontent.com/xano-community/commons-team-workspace/HEAD/docs/screenshot-light.png",
+  "screenshotDark": "https://raw.githubusercontent.com/xano-community/commons-team-workspace/HEAD/docs/screenshot-dark.png",
+  "counts": {
+    "tables": 39,
+    "endpoints": 186,
+    "screens": 15
+  },
+  "canvas": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "client",
+          "label": "Commons app",
+          "type": "transform",
+          "col": 0,
+          "row": 0,
+          "sublabel": "Overview\nInbox\nChat\nTasks\nDocs\nCustomers\n+2 more"
+        },
+        {
+          "id": "api",
+          "label": "API",
+          "type": "entry",
+          "col": 1,
+          "row": 0,
+          "sublabel": "crm\nagents\ntasks\nauthn\nfiles\nspaces\n+14 more"
+        },
+        {
+          "id": "agents",
+          "label": "Your agents",
+          "type": "transform",
+          "col": 0,
+          "row": 1,
+          "sublabel": "Claude · ChatGPT\nany MCP client"
+        },
+        {
+          "id": "tools",
+          "label": "Agent tools",
+          "type": "entry",
+          "col": 1,
+          "row": 1,
+          "sublabel": "my_inbox\nsearch\nread_record\npost_message\nsave_task\nsave_doc\n+5 more"
+        },
+        {
+          "id": "logic",
+          "label": "Business logic",
+          "type": "transform",
+          "col": 2,
+          "row": 0,
+          "sublabel": "access\nagents\ncrm\ndocs\nfiles\ninbox\n+5 more"
+        },
+        {
+          "id": "data",
+          "label": "Data",
+          "type": "store",
+          "col": 3,
+          "row": 0,
+          "sublabel": "account\nagent_run\nchange_channel\nchange_log\ncompany\ncontact\n+20 more"
+        },
+        {
+          "id": "external",
+          "label": "External services",
+          "type": "external",
+          "col": 4,
+          "row": 0,
+          "sublabel": "Anthropic\nGoogle Gemini"
+        }
+      ],
+      "edges": [
+        {
+          "from": "client",
+          "to": "api"
+        },
+        {
+          "from": "agents",
+          "to": "tools"
+        },
+        {
+          "from": "api",
+          "to": "logic"
+        },
+        {
+          "from": "tools",
+          "to": "logic"
+        },
+        {
+          "from": "logic",
+          "to": "data"
+        },
+        {
+          "from": "logic",
+          "to": "external"
+        }
+      ]
+    }
+  }
+}

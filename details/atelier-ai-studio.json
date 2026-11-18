@@ -1,0 +1,99 @@
+{
+  "repo": "xano-community/atelier-ai-studio",
+  "about": "Atelier is a working AI studio a team can use on day one. A content team writes product copy, makes product photos, short clips, voiceovers and music beds, and asks questions of its own brand guides and customer calls. Every output lands in a Library with how it was made: the prompt, the model, the settings, who made it and what it cost. Admins set a monthly budget for the team and for each person, and approve runs above a line they choose.",
+  "screenshot": "https://raw.githubusercontent.com/xano-community/atelier-ai-studio/HEAD/docs/screenshot-light.png",
+  "screenshotDark": "https://raw.githubusercontent.com/xano-community/atelier-ai-studio/HEAD/docs/screenshot-dark.png",
+  "counts": {
+    "tables": 29,
+    "endpoints": 103,
+    "screens": 13
+  },
+  "canvas": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "client",
+          "label": "Atelier app",
+          "type": "transform",
+          "col": 0,
+          "row": 0,
+          "sublabel": "Home\nPlayground\nRecipes\nNew recipe\nLibrary\nKnowledge\n+3 more"
+        },
+        {
+          "id": "api",
+          "label": "API",
+          "type": "entry",
+          "col": 1,
+          "row": 0,
+          "sublabel": "studio\nauthn\napp\nknowledge\nlibrary\nsettings\n+6 more"
+        },
+        {
+          "id": "agents",
+          "label": "Your agents",
+          "type": "transform",
+          "col": 0,
+          "row": 1,
+          "sublabel": "Claude · ChatGPT\nany MCP client"
+        },
+        {
+          "id": "tools",
+          "label": "Agent tools",
+          "type": "entry",
+          "col": 1,
+          "row": 1,
+          "sublabel": "whats_new\nmy_notifications\nrequest_role_change\nlist_recipes\nrun_recipe\ngenerate\n+6 more"
+        },
+        {
+          "id": "logic",
+          "label": "Business logic",
+          "type": "transform",
+          "col": 2,
+          "row": 0,
+          "sublabel": "ai\nbrand\nknowledge\nlibrary\nrecipes\nruns\n+2 more"
+        },
+        {
+          "id": "data",
+          "label": "Data",
+          "type": "store",
+          "col": 3,
+          "row": 0,
+          "sublabel": "account\nai_run\nai_step\nasset\nbrand\nbrand_image\n+12 more"
+        },
+        {
+          "id": "external",
+          "label": "External services",
+          "type": "external",
+          "col": 4,
+          "row": 0,
+          "sublabel": "Anthropic\nGoogle Gemini"
+        }
+      ],
+      "edges": [
+        {
+          "from": "client",
+          "to": "api"
+        },
+        {
+          "from": "agents",
+          "to": "tools"
+        },
+        {
+          "from": "api",
+          "to": "logic"
+        },
+        {
+          "from": "tools",
+          "to": "logic"
+        },
+        {
+          "from": "logic",
+          "to": "data"
+        },
+        {
+          "from": "logic",
+          "to": "external"
+        }
+      ]
+    }
+  }
+}
