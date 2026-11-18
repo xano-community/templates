@@ -1,130 +1,614 @@
 {
-  "full": [
+  "categories": [
     {
-      "label": "Sales CRM",
-      "detail": "Leads, deals and follow-ups",
-      "icon": "handshake",
-      "prompt": "A CRM for my sales team: contacts and companies, deals that move through stages, notes on each one, a list of who to follow up with this week, and a pipeline total by stage."
+      "id": "tour",
+      "label": "See what Xano can do",
+      "detail": "Small apps that each show one thing, built in minutes",
+      "icon": "compass"
     },
     {
-      "label": "AI support desk",
-      "detail": "Tickets, answered from your help articles",
-      "icon": "headset",
-      "prompt": "A support desk for my business: customers open tickets, an AI agent drafts an answer from my help articles, my team approves or edits it before it is sent, and hard tickets are assigned to a person."
+      "id": "product",
+      "label": "Launch a product",
+      "detail": "SaaS apps, marketplaces and app backends",
+      "icon": "rocket"
+    },
+    {
+      "id": "internal",
+      "label": "Build an internal tool",
+      "detail": "CRMs, approvals and admin panels for your team",
+      "icon": "briefcase"
+    },
+    {
+      "id": "customers",
+      "label": "Serve your customers",
+      "detail": "Help, booking and orders for the people you serve",
+      "icon": "users"
+    },
+    {
+      "id": "ai",
+      "label": "Build with AI",
+      "detail": "Agents that answer, sort and write",
+      "icon": "bot"
+    },
+    {
+      "id": "connect",
+      "label": "Connect your systems",
+      "detail": "Webhooks, scheduled jobs and reports",
+      "icon": "plug"
+    },
+    {
+      "id": "modernize",
+      "label": "Modernize an old app",
+      "detail": "Move a spreadsheet or legacy system, one piece at a time",
+      "icon": "refresh"
+    }
+  ],
+  "full": [
+    {
+      "label": "Sign-in and roles",
+      "detail": "Accounts, and a page only admins see",
+      "icon": "contact",
+      "category": "tour",
+      "prompt": "A small app that shows sign-in: sign-up and sign-in pages, a profile page each user can edit, and a page only admins can open that lists every user. Then show me the tables and endpoints you made."
+    },
+    {
+      "label": "Database and API",
+      "detail": "A table, its endpoints and a page that uses them",
+      "icon": "book",
+      "category": "tour",
+      "prompt": "A small app that shows a database and its API: a books table with a few sample rows, endpoints to list, search, add, change and delete books, and a page that uses each one. Then walk me through the endpoints."
+    },
+    {
+      "label": "AI agent with a tool",
+      "detail": "Chat with an agent that reads your data",
+      "icon": "bot",
+      "category": "tour",
+      "prompt": "A small app that shows a Xano AI agent: a products table with sample rows, an agent with a tool to search it, and a chat page where I ask what is in stock. Then show me the agent's instructions and its tool."
+    },
+    {
+      "label": "Scheduled task",
+      "detail": "Something that runs every minute",
+      "icon": "calendar",
+      "category": "tour",
+      "prompt": "A small app that shows scheduled tasks: every minute a task saves the time and a random number in a table, and a page charts the last hour. Then show me where the task is written."
+    },
+    {
+      "label": "Webhooks",
+      "detail": "An address other systems can send to",
+      "icon": "mail",
+      "category": "tour",
+      "prompt": "A small app that shows webhooks: an endpoint that saves whatever is sent to it, a page that lists what arrived with the newest first, and a command I can run to send it a test."
+    },
+    {
+      "label": "File uploads",
+      "detail": "Upload a picture, see a gallery",
+      "icon": "package",
+      "category": "tour",
+      "prompt": "A small app that shows file uploads: a page to upload a picture with a caption, a gallery of everything uploaded, and a way to delete one."
+    },
+    {
+      "label": "SaaS starter",
+      "detail": "Teams, roles and billing",
+      "icon": "briefcase",
+      "category": "product",
+      "prompt": "A SaaS app where each customer is a team: sign-up, inviting teammates as admins or members, each team sees only its own data, monthly plans paid with Stripe, and a settings page for the team and its billing."
+    },
+    {
+      "label": "Marketplace",
+      "detail": "Sellers list, buyers order",
+      "icon": "handshake",
+      "category": "product",
+      "prompt": "A marketplace with two kinds of account: sellers list items with photos and a price, buyers search and order them, each seller sees only their own orders, and an admin approves new sellers."
+    },
+    {
+      "label": "Online shop",
+      "detail": "Products, a cart and checkout",
+      "icon": "store",
+      "category": "product",
+      "prompt": "An online shop for my business: products with photos, prices and stock, a cart, checkout that takes card payments with Stripe, an order confirmation email, and a page where I see new orders and mark them shipped."
+    },
+    {
+      "label": "Community app",
+      "detail": "Posts, comments and a feed",
+      "icon": "smartphone",
+      "category": "product",
+      "prompt": "A community app: sign-up with a profile and photo, posts people can like and comment on, following other people, a feed of the latest posts from people you follow, and a way to report a post to moderators."
     },
     {
       "label": "Client portal",
       "detail": "Clients see their projects and invoices",
       "icon": "briefcase",
+      "category": "product",
       "prompt": "A client portal for my agency: each client signs in and sees only their own projects, files and invoices, and my team updates each project's status and uploads deliverables."
     },
     {
       "label": "Appointment booking",
       "detail": "Customers book, staff see their day",
       "icon": "calendar",
+      "category": "product",
       "prompt": "An appointment booking app for my business: services with a length and price, staff availability, bookings that never double-book, a reminder email the day before, and a daily schedule for each staff member."
     },
     {
-      "label": "Expense approvals",
-      "detail": "Your team submits, managers approve",
-      "icon": "receipt",
-      "prompt": "An internal tool for my team's expenses: people submit an expense with a receipt photo, their manager approves or rejects it with a note, and finance sees a monthly total by person."
+      "label": "Sales CRM",
+      "detail": "Leads, deals and follow-ups",
+      "icon": "handshake",
+      "category": "internal",
+      "prompt": "A CRM for my sales team: contacts and companies, deals that move through stages, notes on each one, a list of who to follow up with this week, and a pipeline total by stage."
     },
     {
       "label": "Inventory and orders",
       "detail": "Stock, orders and low-stock alerts",
       "icon": "package",
+      "category": "internal",
       "prompt": "An inventory app for my shop: products with stock levels, orders that reduce stock, and an email every morning listing anything that is running low."
+    },
+    {
+      "label": "Expense approvals",
+      "detail": "Your team submits, managers approve",
+      "icon": "receipt",
+      "category": "internal",
+      "prompt": "An internal tool for my team's expenses: people submit an expense with a receipt photo, their manager approves or rejects it with a note, and finance sees a monthly total by person."
+    },
+    {
+      "label": "Task board",
+      "detail": "Who is doing what, and what is late",
+      "icon": "notebook",
+      "category": "internal",
+      "prompt": "A task board for my team: projects with tasks, who owns each task and when it is due, columns for to do, doing and done that I can drag tasks between, and a page of everything that is overdue."
+    },
+    {
+      "label": "Admin panel",
+      "detail": "Search, edit and audit your data",
+      "icon": "contact",
+      "category": "internal",
+      "prompt": "An admin panel for my product's data: tables of users and orders I can search, filter and edit, roles for who can change what, and a log of every change with who made it and when."
+    },
+    {
+      "label": "AI support desk",
+      "detail": "Tickets, answered from your help articles",
+      "icon": "headset",
+      "category": "ai",
+      "prompt": "A support desk for my business: customers open tickets, an AI agent drafts an answer from my help articles, my team approves or edits it before it is sent, and hard tickets are assigned to a person."
+    },
+    {
+      "label": "Ask your documents",
+      "detail": "Answers from your own files",
+      "icon": "book",
+      "category": "ai",
+      "prompt": "An app where my team asks questions about our company documents: I add our policies and guides, an AI agent answers from them in a chat and says which document each answer came from, and I see the questions it could not answer."
+    },
+    {
+      "label": "Lead scoring",
+      "detail": "AI rates each new lead with a reason",
+      "icon": "target",
+      "category": "ai",
+      "prompt": "A lead tracker for my business: a sign-up form saves new leads, an AI agent reads each one and rates it hot, warm or cold with a short reason, and my team sees the best leads first."
+    },
+    {
+      "label": "Meeting notes",
+      "detail": "AI turns your notes into to-dos",
+      "icon": "notebook",
+      "category": "ai",
+      "prompt": "A meeting notes app: I paste my notes, an AI agent pulls out the action items with who owns them and when they are due, and saves them as tasks my team can tick off."
+    },
+    {
+      "label": "Document reader",
+      "detail": "AI reads invoices into rows",
+      "icon": "receipt",
+      "category": "ai",
+      "prompt": "An app that reads my supplier invoices: I upload a PDF or photo, an AI agent reads the supplier, date, line items and total from it, I correct anything it got wrong, and the invoices are listed by supplier and month."
+    },
+    {
+      "label": "Billing dashboard",
+      "detail": "Payments and subscriptions in one place",
+      "icon": "credit-card",
+      "category": "connect",
+      "prompt": "A billing dashboard: take Stripe webhooks, record each payment and subscription change, show every customer's current status, and flag failed payments for my team to follow up."
+    },
+    {
+      "label": "Status page",
+      "detail": "Checks your services, shows what is down",
+      "icon": "target",
+      "category": "connect",
+      "prompt": "A status page for my services: a scheduled task calls each service's health address every few minutes and records whether it answered and how fast, a public page shows what is up, and my team gets an email when something goes down."
+    },
+    {
+      "label": "Daily report",
+      "detail": "A scheduled summary in your inbox",
+      "icon": "mail",
+      "category": "connect",
+      "prompt": "A reporting app: my other systems send each sale to an endpoint, a page charts sales by day and product, and every morning I get an email with yesterday's totals, top products and anything unusual."
+    },
+    {
+      "label": "Form inbox",
+      "detail": "Every website form in one place",
+      "icon": "contact",
+      "category": "connect",
+      "prompt": "An inbox for the forms on my websites: an endpoint each form posts to, every entry saved and emailed to the right person, repeated spam turned away, and a page where my team searches entries and marks them handled."
+    },
+    {
+      "label": "Replace a spreadsheet",
+      "detail": "A real app for data your team shares",
+      "icon": "notebook",
+      "category": "modernize",
+      "prompt": "An app to replace a spreadsheet my team shares. I will paste its columns and a few rows. Make a table for it, a page to search, add and edit rows, a record of who changed what, a CSV import for the old data, and sign-in for my team only."
+    },
+    {
+      "label": "Rebuild a desktop database",
+      "detail": "Move an Access or FileMaker app to the web",
+      "icon": "package",
+      "category": "modernize",
+      "prompt": "Rebuild my old desktop database app as a web app. I will describe its tables, forms and reports. Start with the tables and the most used form, keep the same field names so I can import the old data, and add sign-in with roles."
+    },
+    {
+      "label": "One piece at a time",
+      "detail": "Move one part of an old app first",
+      "icon": "truck",
+      "category": "modernize",
+      "prompt": "Move one part of my old application to Xano and leave the rest running. I will describe that part, such as its customer records. Build its tables, its endpoints with the same request and response shapes the old app uses, and its screens, so I can switch that part over and then do the next."
+    },
+    {
+      "label": "Replace scheduled scripts",
+      "detail": "Scheduled jobs you can see and trust",
+      "icon": "calendar",
+      "category": "modernize",
+      "prompt": "Replace the scheduled scripts my team runs on an old server. I will describe what each one does and when it runs. Rebuild each as a scheduled task with a log of every run, what it changed and whether it failed, a page showing the runs, and an email when one fails."
     }
   ],
   "backend": [
     {
-      "label": "Booking API",
-      "detail": "Availability, bookings and reminders",
+      "label": "Database and API",
+      "detail": "A table and the endpoints to use it",
+      "icon": "book",
+      "category": "tour",
+      "prompt": "A small backend that shows a database and its API: a books table with a few sample rows, and endpoints to list, search, add, change and delete books. Then show me how to call each one."
+    },
+    {
+      "label": "Sign-in",
+      "detail": "Accounts and endpoints only they can call",
+      "icon": "contact",
+      "category": "tour",
+      "prompt": "A small backend that shows sign-in: sign-up and sign-in endpoints, an endpoint that returns the signed-in user's profile, and one only admins can call that lists every user. Then show me how to call each one."
+    },
+    {
+      "label": "Scheduled task",
+      "detail": "Something that runs every minute",
       "icon": "calendar",
-      "prompt": "A booking API for my salon's existing website: services, staff availability, bookings that never double-book, and a reminder email the day before."
+      "category": "tour",
+      "prompt": "A small backend that shows scheduled tasks: every minute a task saves the time and a random number in a table, and an endpoint returns the last hour. Then show me where the task is written."
+    },
+    {
+      "label": "Webhooks",
+      "detail": "An address other systems can send to",
+      "icon": "mail",
+      "category": "tour",
+      "prompt": "A small backend that shows webhooks: an endpoint that saves whatever is sent to it, another that lists what arrived with the newest first, and a command I can run to send it a test."
     },
     {
       "label": "Mobile app backend",
       "detail": "Sign-in, profiles and a feed",
       "icon": "smartphone",
+      "category": "product",
       "prompt": "The backend for my mobile app: sign-up and sign-in, user profiles with photos, posts people can like and comment on, and a feed of the latest posts from people they follow."
     },
     {
-      "label": "Payments webhooks",
-      "detail": "Stripe events update your customers",
-      "icon": "credit-card",
-      "prompt": "A backend that takes Stripe webhooks: record each payment, keep every customer's subscription status up to date, and flag failed payments for my team."
+      "label": "SaaS backend",
+      "detail": "Teams, roles and data kept apart",
+      "icon": "briefcase",
+      "category": "product",
+      "prompt": "The backend for my SaaS product: sign-up and sign-in, teams with admin and member roles, invitations by email, every table scoped so a team reads only its own rows, and endpoints for my frontend to manage the team."
+    },
+    {
+      "label": "Customer accounts",
+      "detail": "Sign-up, sign-in and profiles",
+      "icon": "briefcase",
+      "category": "product",
+      "prompt": "Customer accounts for my existing website: sign-up with email confirmation, sign-in, a forgotten-password email, and a profile each customer can read and change but nobody else can."
+    },
+    {
+      "label": "Shop backend",
+      "detail": "Products, carts and orders",
+      "icon": "store",
+      "category": "product",
+      "prompt": "The backend for my online shop: products with prices and stock, a cart for each customer, checkout that makes an order and reduces stock, and endpoints for my website to list products and show a customer's orders."
+    },
+    {
+      "label": "Booking API",
+      "detail": "Availability, bookings and reminders",
+      "icon": "calendar",
+      "category": "product",
+      "prompt": "A booking API for my salon's existing website: services, staff availability, bookings that never double-book, and a reminder email the day before."
     },
     {
       "label": "Inventory API",
       "detail": "Stock, orders and low-stock alerts",
       "icon": "package",
+      "category": "internal",
       "prompt": "An inventory API for my shop: products with stock levels, orders that reduce stock, and an alert when anything runs low."
+    },
+    {
+      "label": "Admin API",
+      "detail": "Search, edit and audit your data",
+      "icon": "contact",
+      "category": "internal",
+      "prompt": "An admin API for my product's data: endpoints to search, filter and edit users and orders, roles for who can change what, and a log of every change with who made it and when."
+    },
+    {
+      "label": "Text summaries",
+      "detail": "Send text, get the short version",
+      "icon": "book",
+      "category": "ai",
+      "prompt": "A backend with an endpoint that takes a long piece of text, such as a customer email or a call transcript, and returns a short summary and a list of action items written by AI, and saves each one so I can read it later."
+    },
+    {
+      "label": "Message sorting",
+      "detail": "AI tags each message by topic",
+      "icon": "target",
+      "category": "ai",
+      "prompt": "A backend that takes the messages my customers send: AI tags each one with a topic and how urgent it is, saves it, and an endpoint lists them with the most urgent first."
+    },
+    {
+      "label": "Plain-words search",
+      "detail": "Customers describe it, AI finds it",
+      "icon": "store",
+      "category": "ai",
+      "prompt": "A product search backend for my shop: products with a name, description and price, and a search endpoint where customers describe what they want in plain words and AI returns the best matches."
+    },
+    {
+      "label": "Website forms",
+      "detail": "Save every entry and email it to you",
+      "icon": "contact",
+      "category": "connect",
+      "prompt": "A backend for the forms on my existing website: an endpoint that saves each contact or sign-up entry, emails it to me, turns away repeated spam, and lets me list and search the entries."
+    },
+    {
+      "label": "Payments webhooks",
+      "detail": "Stripe events update your customers",
+      "icon": "credit-card",
+      "category": "connect",
+      "prompt": "A backend that takes Stripe webhooks: record each payment, keep every customer's subscription status up to date, and flag failed payments for my team."
     },
     {
       "label": "Nightly reports",
       "detail": "A scheduled summary in your inbox",
       "icon": "mail",
+      "category": "connect",
       "prompt": "A backend that stores my team's sales and sends me an email every morning with yesterday's totals, top products and anything unusual."
+    },
+    {
+      "label": "Data sync",
+      "detail": "Keep two systems in step",
+      "icon": "handshake",
+      "category": "connect",
+      "prompt": "A backend that keeps my CRM and my billing system in step: take webhooks from each, match customers by email, save one record for each customer with both systems' fields, and list the customers where the two disagree."
+    },
+    {
+      "label": "Spreadsheet replacement",
+      "detail": "Your team's data, behind an API",
+      "icon": "notebook",
+      "category": "modernize",
+      "prompt": "A backend to replace a spreadsheet my team shares: a table for each sheet, endpoints to add, change, search and export rows, a record of who changed what, and only people on my team can sign in."
+    },
+    {
+      "label": "API for an old database",
+      "detail": "Modern endpoints over old tables",
+      "icon": "book",
+      "category": "modernize",
+      "prompt": "A modern API in front of my old database. I will paste its table definitions. Make matching tables, clean REST endpoints with sign-in and paging, and an import so I can load the old data."
+    },
+    {
+      "label": "One service at a time",
+      "detail": "Move one part of an old app first",
+      "icon": "truck",
+      "category": "modernize",
+      "prompt": "Move one service of my old application to Xano and leave the rest running. I will describe that service and paste its requests and responses. Build its tables and endpoints with the same request and response shapes, so the old app's callers work unchanged when I switch it over."
+    },
+    {
+      "label": "Replace scheduled scripts",
+      "detail": "Scheduled jobs you can see and trust",
+      "icon": "calendar",
+      "category": "modernize",
+      "prompt": "Replace the scheduled scripts my team runs on an old server. I will describe what each one does and when it runs. Rebuild each as a scheduled task with a log of every run, what it changed and whether it failed, an endpoint that lists the runs, and an email when one fails."
     }
   ],
   "mcp": [
     {
-      "label": "Help center MCP",
-      "detail": "Claude answers from your articles",
+      "label": "First MCP server",
+      "detail": "Two tools to try from Claude",
+      "icon": "bot",
+      "category": "tour",
+      "prompt": "A small MCP server to try: one tool that returns the current time in a city I name and one that rolls dice. Then tell me how to connect it to Claude or ChatGPT and what to ask."
+    },
+    {
+      "label": "Notes MCP",
+      "detail": "Save and find notes from a chat",
+      "icon": "notebook",
+      "category": "tour",
+      "prompt": "A small notes backend with an MCP server: tools to save a note with tags, search my notes and fetch one. Then tell me how to connect it to Claude so I can try it."
+    },
+    {
+      "label": "API docs MCP",
+      "detail": "AI coding tools read your API's docs",
       "icon": "book",
-      "prompt": "An MCP server for my help center: tools to search my help articles and fetch one, so Claude and ChatGPT can answer my customers' questions from them."
+      "category": "product",
+      "prompt": "An MCP server for the developers who use my product: a table of my API's endpoints and guides, and tools to search them and fetch one, so AI coding assistants can answer questions about my API."
+    },
+    {
+      "label": "Account MCP",
+      "detail": "Your users reach their data from an AI assistant",
+      "icon": "contact",
+      "category": "product",
+      "prompt": "An MCP server for my product's users: each user signs in, and tools list, find and update only that user's own records, so they can work with their account from Claude or ChatGPT."
     },
     {
       "label": "CRM MCP",
       "detail": "ChatGPT looks up and updates customers",
       "icon": "contact",
+      "category": "internal",
       "prompt": "A simple CRM with an MCP server: customers, companies and notes, with tools to find a customer, add a note and list who to follow up with this week."
     },
     {
       "label": "Expenses MCP",
       "detail": "Log spending by chatting with Claude",
       "icon": "receipt",
+      "category": "internal",
       "prompt": "An expense tracker used from Claude through an MCP server: tools to log an expense with a category, list this month's spending, and total it by category."
+    },
+    {
+      "label": "Tasks MCP",
+      "detail": "Add and tick off to-dos from a chat",
+      "icon": "notebook",
+      "category": "internal",
+      "prompt": "A to-do list for my team with an MCP server: tasks with an owner and a due date, and tools to add a task, list what is due this week and mark one done, so we can manage them from Claude or ChatGPT."
+    },
+    {
+      "label": "Stock MCP",
+      "detail": "Ask an AI assistant what is in stock",
+      "icon": "package",
+      "category": "internal",
+      "prompt": "An inventory backend for my shop with an MCP server: products with stock levels, and tools to check a product's stock, record a delivery and list what is running low, so I can ask an AI assistant instead of opening a spreadsheet."
+    },
+    {
+      "label": "Help center MCP",
+      "detail": "Claude answers from your articles",
+      "icon": "book",
+      "category": "customers",
+      "prompt": "An MCP server for my help center: tools to search my help articles and fetch one, so Claude and ChatGPT can answer my customers' questions from them."
     },
     {
       "label": "Booking MCP",
       "detail": "AI assistants book appointments",
       "icon": "calendar",
+      "category": "customers",
       "prompt": "An appointment booking backend with an MCP server: tools to check open slots, book one, and cancel, so AI assistants can book appointments for my customers."
     },
     {
       "label": "Orders MCP",
       "detail": "AI assistants check order status",
       "icon": "truck",
+      "category": "customers",
       "prompt": "An orders backend with an MCP server: customers and orders, with tools to find an order, check its status and list what shipped this week, so AI assistants can answer my customers."
+    },
+    {
+      "label": "Product catalog MCP",
+      "detail": "AI assistants find products and prices",
+      "icon": "store",
+      "category": "customers",
+      "prompt": "A product catalog for my shop with an MCP server: products with a description, price and whether they are in stock, and tools to search them and fetch one, so AI assistants can recommend my products."
+    },
+    {
+      "label": "Old records MCP",
+      "detail": "Ask an AI assistant about legacy data",
+      "icon": "package",
+      "category": "modernize",
+      "prompt": "An MCP server over the data from my old system. I will paste its table definitions. Make matching tables and an import, and read-only tools to search records and fetch one, so my team can ask Claude about the old data."
+    },
+    {
+      "label": "Old API MCP",
+      "detail": "Give AI assistants tools for a legacy API",
+      "icon": "truck",
+      "category": "modernize",
+      "prompt": "An MCP server in front of my old system's API. I will paste the requests it accepts. Make a tool for each one I name, which calls the old API and returns a clean result, and keep a log of every call."
     }
   ],
   "agent": [
     {
-      "label": "Support agent",
-      "detail": "Answers customers from your FAQ",
-      "icon": "headset",
-      "prompt": "An AI support agent for my shop: an FAQ table I can edit, and a Xano AI agent that answers customer questions from it, with a chat page where customers ask and a list of questions it couldn't answer."
+      "label": "Agent with a tool",
+      "detail": "Chat with an agent that reads your data",
+      "icon": "bot",
+      "category": "tour",
+      "prompt": "A small app that shows a Xano AI agent: a products table with sample rows, an agent with a tool to search it, and a chat page where I ask what is in stock. Then show me the agent's instructions and its tool."
+    },
+    {
+      "label": "Agent that saves",
+      "detail": "Tell it something, it fills in a table",
+      "icon": "notebook",
+      "category": "tour",
+      "prompt": "A small app that shows a Xano AI agent changing data: I type what I spent in plain words, the agent saves each expense with an amount and a category, and a page lists them. Then show me the tool it uses to save."
+    },
+    {
+      "label": "In-app assistant",
+      "detail": "Answers users inside your product",
+      "icon": "smartphone",
+      "category": "product",
+      "prompt": "An assistant for my product's users: a Xano AI agent that answers a signed-in user's questions about their own account, with tools that read only that user's records, and a chat endpoint and page my app can use."
+    },
+    {
+      "label": "Onboarding guide",
+      "detail": "Walks new users through setup",
+      "icon": "target",
+      "category": "product",
+      "prompt": "An onboarding guide for my product: a list of setup steps each new user should finish, and a Xano AI agent that sees which steps a user has done, answers their questions and suggests the next step, with a chat page."
     },
     {
       "label": "Orders assistant",
       "detail": "Finds and updates orders when you ask",
       "icon": "truck",
+      "category": "internal",
       "prompt": "An orders assistant for my shop: customers and orders tables, and a Xano AI agent with tools to find an order, check its status and mark it shipped, with a chat page where my team asks in plain words."
     },
     {
       "label": "Lead qualifier",
       "detail": "Scores new sign-ups with a reason",
       "icon": "target",
+      "category": "internal",
       "prompt": "A lead tracker: a sign-up form saves new leads, and a Xano AI agent reads each one, rates it hot, warm or cold with a short reason, and saves that so my team sees the best leads first."
     },
     {
       "label": "Meeting notes",
       "detail": "Turns your notes into to-dos",
       "icon": "notebook",
+      "category": "internal",
       "prompt": "A meeting notes app: I paste my notes, and a Xano AI agent pulls out the action items with who owns them and when they're due, and saves them as tasks I can tick off."
+    },
+    {
+      "label": "Inbox sorter",
+      "detail": "Sorts messages and drafts replies",
+      "icon": "mail",
+      "category": "internal",
+      "prompt": "An inbox for my business's messages: each new message is saved, and a Xano AI agent tags it as a question, a complaint or an order and drafts a reply, with a page where my team edits and approves each reply."
+    },
+    {
+      "label": "Weekly report",
+      "detail": "Your week's sales in plain words",
+      "icon": "briefcase",
+      "category": "internal",
+      "prompt": "A sales log with a weekly report: my team records each sale, and every Monday a Xano AI agent reads last week's sales and writes a short summary of what sold, what did not and what changed, which I read on a reports page."
+    },
+    {
+      "label": "Support agent",
+      "detail": "Answers customers from your FAQ",
+      "icon": "headset",
+      "category": "customers",
+      "prompt": "An AI support agent for my shop: an FAQ table I can edit, and a Xano AI agent that answers customer questions from it, with a chat page where customers ask and a list of questions it couldn't answer."
+    },
+    {
+      "label": "Booking assistant",
+      "detail": "Customers book by chatting",
+      "icon": "calendar",
+      "category": "customers",
+      "prompt": "A booking assistant for my business: services and open time slots, and a Xano AI agent with tools to find a free slot, book it and cancel it, with a chat page where customers book in plain words and a page of today's bookings for my team."
+    },
+    {
+      "label": "Product finder",
+      "detail": "Recommends products from your catalog",
+      "icon": "store",
+      "category": "customers",
+      "prompt": "A product finder for my shop: a products table with descriptions and prices, and a Xano AI agent that asks a customer what they need and recommends products from it, with a chat page for customers."
+    },
+    {
+      "label": "Old data clean-up",
+      "detail": "Fixes records as you bring them over",
+      "icon": "package",
+      "category": "modernize",
+      "prompt": "A clean-up tool for data from my old system: I import the old customer records, and a Xano AI agent finds likely duplicates, fixes names and phone number formats, and lists what it would change for me to approve."
+    },
+    {
+      "label": "Old system explainer",
+      "detail": "Answers questions from legacy records",
+      "icon": "book",
+      "category": "modernize",
+      "prompt": "A helper for my team while we replace an old system: I import its records and paste notes on what each field means, and a Xano AI agent answers questions about the old data in a chat page and says which records each answer came from."
     }
   ]
 }
