@@ -1,0 +1,130 @@
+{
+  "full": [
+    {
+      "label": "Sales CRM",
+      "detail": "Leads, deals and follow-ups",
+      "icon": "handshake",
+      "prompt": "A CRM for my sales team: contacts and companies, deals that move through stages, notes on each one, a list of who to follow up with this week, and a pipeline total by stage."
+    },
+    {
+      "label": "AI support desk",
+      "detail": "Tickets, answered from your help articles",
+      "icon": "headset",
+      "prompt": "A support desk for my business: customers open tickets, an AI agent drafts an answer from my help articles, my team approves or edits it before it is sent, and hard tickets are assigned to a person."
+    },
+    {
+      "label": "Client portal",
+      "detail": "Clients see their projects and invoices",
+      "icon": "briefcase",
+      "prompt": "A client portal for my agency: each client signs in and sees only their own projects, files and invoices, and my team updates each project's status and uploads deliverables."
+    },
+    {
+      "label": "Appointment booking",
+      "detail": "Customers book, staff see their day",
+      "icon": "calendar",
+      "prompt": "An appointment booking app for my business: services with a length and price, staff availability, bookings that never double-book, a reminder email the day before, and a daily schedule for each staff member."
+    },
+    {
+      "label": "Expense approvals",
+      "detail": "Your team submits, managers approve",
+      "icon": "receipt",
+      "prompt": "An internal tool for my team's expenses: people submit an expense with a receipt photo, their manager approves or rejects it with a note, and finance sees a monthly total by person."
+    },
+    {
+      "label": "Inventory and orders",
+      "detail": "Stock, orders and low-stock alerts",
+      "icon": "package",
+      "prompt": "An inventory app for my shop: products with stock levels, orders that reduce stock, and an email every morning listing anything that is running low."
+    }
+  ],
+  "backend": [
+    {
+      "label": "Booking API",
+      "detail": "Availability, bookings and reminders",
+      "icon": "calendar",
+      "prompt": "A booking API for my salon's existing website: services, staff availability, bookings that never double-book, and a reminder email the day before."
+    },
+    {
+      "label": "Mobile app backend",
+      "detail": "Sign-in, profiles and a feed",
+      "icon": "smartphone",
+      "prompt": "The backend for my mobile app: sign-up and sign-in, user profiles with photos, posts people can like and comment on, and a feed of the latest posts from people they follow."
+    },
+    {
+      "label": "Payments webhooks",
+      "detail": "Stripe events update your customers",
+      "icon": "credit-card",
+      "prompt": "A backend that takes Stripe webhooks: record each payment, keep every customer's subscription status up to date, and flag failed payments for my team."
+    },
+    {
+      "label": "Inventory API",
+      "detail": "Stock, orders and low-stock alerts",
+      "icon": "package",
+      "prompt": "An inventory API for my shop: products with stock levels, orders that reduce stock, and an alert when anything runs low."
+    },
+    {
+      "label": "Nightly reports",
+      "detail": "A scheduled summary in your inbox",
+      "icon": "mail",
+      "prompt": "A backend that stores my team's sales and sends me an email every morning with yesterday's totals, top products and anything unusual."
+    }
+  ],
+  "mcp": [
+    {
+      "label": "Help center MCP",
+      "detail": "Claude answers from your articles",
+      "icon": "book",
+      "prompt": "An MCP server for my help center: tools to search my help articles and fetch one, so Claude and ChatGPT can answer my customers' questions from them."
+    },
+    {
+      "label": "CRM MCP",
+      "detail": "ChatGPT looks up and updates customers",
+      "icon": "contact",
+      "prompt": "A simple CRM with an MCP server: customers, companies and notes, with tools to find a customer, add a note and list who to follow up with this week."
+    },
+    {
+      "label": "Expenses MCP",
+      "detail": "Log spending by chatting with Claude",
+      "icon": "receipt",
+      "prompt": "An expense tracker used from Claude through an MCP server: tools to log an expense with a category, list this month's spending, and total it by category."
+    },
+    {
+      "label": "Booking MCP",
+      "detail": "AI assistants book appointments",
+      "icon": "calendar",
+      "prompt": "An appointment booking backend with an MCP server: tools to check open slots, book one, and cancel, so AI assistants can book appointments for my customers."
+    },
+    {
+      "label": "Orders MCP",
+      "detail": "AI assistants check order status",
+      "icon": "truck",
+      "prompt": "An orders backend with an MCP server: customers and orders, with tools to find an order, check its status and list what shipped this week, so AI assistants can answer my customers."
+    }
+  ],
+  "agent": [
+    {
+      "label": "Support agent",
+      "detail": "Answers customers from your FAQ",
+      "icon": "headset",
+      "prompt": "An AI support agent for my shop: an FAQ table I can edit, and a Xano AI agent that answers customer questions from it, with a chat page where customers ask and a list of questions it couldn't answer."
+    },
+    {
+      "label": "Orders assistant",
+      "detail": "Finds and updates orders when you ask",
+      "icon": "truck",
+      "prompt": "An orders assistant for my shop: customers and orders tables, and a Xano AI agent with tools to find an order, check its status and mark it shipped, with a chat page where my team asks in plain words."
+    },
+    {
+      "label": "Lead qualifier",
+      "detail": "Scores new sign-ups with a reason",
+      "icon": "target",
+      "prompt": "A lead tracker: a sign-up form saves new leads, and a Xano AI agent reads each one, rates it hot, warm or cold with a short reason, and saves that so my team sees the best leads first."
+    },
+    {
+      "label": "Meeting notes",
+      "detail": "Turns your notes into to-dos",
+      "icon": "notebook",
+      "prompt": "A meeting notes app: I paste my notes, and a Xano AI agent pulls out the action items with who owns them and when they're due, and saves them as tasks I can tick off."
+    }
+  ]
+}

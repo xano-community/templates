@@ -1,0 +1,23 @@
+[
+  {
+    "repo": "xano-community/commons-team-workspace",
+    "name": "Commons",
+    "description": "Chat, tasks, docs and customers for a small team, with AI agents that ask before they act.",
+    "signature": "kanban",
+    "prompt": "I'm starting from the Commons template. Show me around, then help me make it mine.\n\nWhat I want to change: "
+  },
+  {
+    "repo": "xano-community/atelier-ai-studio",
+    "name": "Atelier",
+    "description": "An AI studio for your team: try models, save what works as recipes, and ask your own documents.",
+    "signature": "library",
+    "prompt": "I'm starting from the Atelier template. Show me around, then help me make it mine.\n\nWhat I want to change: "
+  },
+  {
+    "repo": "xano-community/countersign-document-signing",
+    "name": "Countersign",
+    "description": "Send documents for signature, sign them anywhere, and keep a copy anyone can check.",
+    "signature": "document",
+    "prompt": "I'm starting from the Countersign template. Show me around, then help me make it mine.\n\nWhat I want to change: "
+  }
+]
